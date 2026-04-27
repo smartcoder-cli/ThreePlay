@@ -42,7 +42,7 @@ function renderPhase(phase) {
         <section class="phase-section">
             <div class="phase-section__title">
                 <h2>${phase.title}</h2>
-                <span class="phase-section__badge">${phaseLessons.length} lessons</span>
+                <span class="phase-section__badge">${phaseLessons.length} demos</span>
             </div>
             <p class="feature-card__body">${phase.description}</p>
             <div class="lesson-grid">
@@ -53,10 +53,8 @@ function renderPhase(phase) {
 }
 
 function renderLessonCard(lesson) {
-    const cardClass = "lesson-card";
-
     return `
-        <article class="${cardClass}">
+        <article class="lesson-card">
             <div class="lesson-card__header">
                 <h3 class="lesson-card__title">${lesson.title}</h3>
                 <div class="lesson-card__number">${lesson.id}</div>
@@ -64,7 +62,7 @@ function renderLessonCard(lesson) {
             <p class="lesson-card__description">${lesson.description}</p>
             <a class="lesson-card__link" href="./examples/${lesson.slug}/index.html">
                 <span>Open demo</span>
-                <span class="lesson-card__arrow">→</span>
+                <span class="lesson-card__arrow">-></span>
             </a>
         </article>
     `;
